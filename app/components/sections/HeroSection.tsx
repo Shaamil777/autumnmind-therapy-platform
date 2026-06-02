@@ -3,7 +3,7 @@
 export default function HeroSection() {
   return (
     <section id="hero" className="min-h-screen py-20 overflow-hidden relative flex items-center justify-center">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+      <div className="section-container w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side Content */}
           {/* Left Side Content */}

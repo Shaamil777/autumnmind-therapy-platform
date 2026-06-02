@@ -75,9 +75,11 @@ export default function ServiceSection() {
   return (
     <section
       id="service"
-      className="relative py-20 md:py-24 w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
       style={{
         background: "var(--background)",
+        paddingTop: "var(--section-py)",
+        paddingBottom: "var(--section-py)",
       }}
     >
       {/* Subtle radial gradient background accents */}
@@ -97,7 +99,7 @@ export default function ServiceSection() {
       />
 
       {/* ── Section Header ── */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 mb-16 md:mb-20">
+      <div className="section-container relative z-10 mb-16 md:mb-20">
         <FadeIn className="text-center">
           {/* Label with extending line */}
           <div className="flex items-center justify-center gap-5 mb-6">
@@ -131,7 +133,7 @@ export default function ServiceSection() {
       </div>
 
       {/* ── Vertical Hover Accordion List ── */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="section-container relative z-10">
         <div className="flex flex-col border-t" style={{ borderColor: 'var(--border-subtle)' }}>
           {services.map((service, index) => {
             const isHovered = hoveredIndex === index;
@@ -200,14 +202,15 @@ export default function ServiceSection() {
 
                 {/* Floating Image Reveal (Desktop Only) */}
                 <div
-                  className="hidden lg:block absolute top-1/2 right-6 w-[300px] h-[180px] rounded-lg overflow-hidden pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
+                  className="hidden lg:block absolute top-1/2 right-6 w-[300px] h-[180px] overflow-hidden pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)]"
                   style={{
                     opacity: isHovered ? 1 : 0,
                     visibility: isHovered ? "visible" : "hidden",
                     transform: isHovered
                       ? "translateY(-50%) scale(1) rotate(0deg)"
                       : "translateY(-40%) scale(0.95) rotate(-2deg)",
-                    boxShadow: "0 20px 40px rgba(122,158,159,0.15), 0 4px 16px rgba(31,31,31,0.06)",
+                    boxShadow: "var(--card-shadow-hover)",
+                    borderRadius: "var(--card-radius)",
                     zIndex: 20,
                   }}
                 >
@@ -233,7 +236,7 @@ export default function ServiceSection() {
       </div>
 
       {/* ── Bottom CTA ── */}
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 mt-16 md:mt-20 flex justify-center pb-8 relative z-10">
+      <div className="section-container mt-16 md:mt-20 flex justify-center pb-8 relative z-10">
         <a
           href="#contact"
           className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-sm font-semibold tracking-wide uppercase transition-all duration-300 hover:-translate-y-0.5"

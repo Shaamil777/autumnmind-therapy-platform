@@ -65,7 +65,7 @@ export default function Navbar() {
 
       {/* Main Navbar Content (Always Visible) */}
       <nav className="fixed top-0 left-0 right-0 z-50 font-quicksand">
-        <div className="flex items-center justify-between h-16 px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16" style={{ paddingLeft: 'var(--section-px)', paddingRight: 'var(--section-px)' }}>
           
           {/* Logo */}
           <div className="shrink-0">
@@ -222,7 +222,7 @@ export default function Navbar() {
           ? 'bottom-6 md:bottom-10 right-4 md:right-10 translate-y-0 opacity-100' 
           : 'bottom-4 md:bottom-8 right-4 md:right-10 translate-y-10 opacity-0 pointer-events-none'
       }`}>
-        <div className="bg-white rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.15)] border border-[var(--border-subtle)] p-4 md:p-5 pointer-events-auto overflow-hidden relative max-w-[340px]">
+        <div className="bg-white border border-[var(--border-subtle)] p-4 md:p-5 pointer-events-auto overflow-hidden relative max-w-[340px]" style={{ borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)' }}>
           
           {/* Subtle Accent Line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-[var(--accent)]" />

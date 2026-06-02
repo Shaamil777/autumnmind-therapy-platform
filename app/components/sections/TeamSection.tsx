@@ -134,6 +134,9 @@ export default function TeamSection() {
     const isActive = index === activeIndex;
     const isLeft = (activeIndex - 1 + testimonialsLength) % testimonialsLength === index;
     const isRight = (activeIndex + 1) % testimonialsLength === index;
+
+    const baseRadius = "var(--card-radius)";
+    const baseShadow = "var(--card-shadow)";
     
     if (isActive) {
       return {
@@ -142,6 +145,8 @@ export default function TeamSection() {
         pointerEvents: "auto",
         transform: `translateX(0px) translateY(0px) scale(1) rotateY(0deg)`,
         transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        borderRadius: baseRadius,
+        boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
       };
     }
     if (isLeft) {
@@ -151,6 +156,8 @@ export default function TeamSection() {
         pointerEvents: "auto",
         transform: `translateX(-${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(15deg)`,
         transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        borderRadius: baseRadius,
+        boxShadow: baseShadow,
       };
     }
     if (isRight) {
@@ -160,6 +167,8 @@ export default function TeamSection() {
         pointerEvents: "auto",
         transform: `translateX(${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(-15deg)`,
         transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        borderRadius: baseRadius,
+        boxShadow: baseShadow,
       };
     }
     // Hide all other images
@@ -168,6 +177,7 @@ export default function TeamSection() {
       opacity: 0,
       pointerEvents: "none",
       transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+      borderRadius: baseRadius,
     };
   }
 
@@ -179,9 +189,9 @@ export default function TeamSection() {
   };
 
   return (
-    <section id="team" className="py-20 md:py-32 w-full relative overflow-hidden" style={{ background: "var(--background)" }}>
+    <section id="team" className="w-full relative overflow-hidden" style={{ background: "var(--background)", paddingTop: "var(--section-py)", paddingBottom: "var(--section-py)" }}>
       {/* ── Section Header ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16 md:mb-24">
+      <div className="section-container mb-16 md:mb-24">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +217,7 @@ export default function TeamSection() {
       </div>
 
       {/* ── Carousel Layout ── */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 pb-10">
+      <div className="section-container pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Images */}
@@ -221,7 +231,7 @@ export default function TeamSection() {
                 key={member.id}
                 src={member.image}
                 alt={member.name}
-                className="absolute inset-0 w-full h-full object-cover rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-[#E6E6E6]"
+                className="absolute inset-0 w-full h-full object-cover bg-[#E6E6E6]"
                 data-index={index}
                 style={getImageStyle(index)}
               />

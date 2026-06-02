@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full border-t border-[var(--border-subtle)] bg-[var(--background)] py-10 md:py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
           
           {/* Left: Copyright */}

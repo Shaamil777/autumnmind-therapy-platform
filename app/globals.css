@@ -132,12 +132,36 @@ body {
   background-color: var(--calm-accent-hover);
 }
 
+/* ── Spacing & Layout Tokens ── */
+:root {
+  --section-px: clamp(1.5rem, 4vw, 4rem);
+  --section-py: clamp(5rem, 8vw, 8rem);
+  --card-radius: 1.25rem;         /* 20px — uniform across all cards */
+  --card-shadow: 0 4px 24px rgba(31, 31, 31, 0.06), 0 1.5px 6px rgba(31, 31, 31, 0.04);
+  --card-shadow-hover: 0 12px 40px rgba(31, 31, 31, 0.10), 0 4px 12px rgba(31, 31, 31, 0.06);
+}
+
+/* Uniform section container */
+.section-container {
+  max-width: 80rem; /* 1280px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+
 /* Card Components */
 .card {
   background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--card-radius);
   padding: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .card-header {

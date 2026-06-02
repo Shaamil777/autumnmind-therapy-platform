@@ -44,7 +44,7 @@ function VisionMissionCards() {
   return (
     <div
       ref={containerRef}
-      className="relative max-w-7xl mx-auto px-6 lg:px-8"
+      className="relative section-container"
     >
       {/* Section sub-label */}
       <div className="text-center mb-14">
@@ -85,22 +85,24 @@ function VisionMissionCards() {
             transition={{ ...springConfig, delay: 0.1 }}
           >
             <motion.div
-              className="relative rounded-2xl p-8 md:p-10 h-full"
+              className="relative p-8 md:p-10 h-full"
               style={{
                 background: "var(--surface)",
                 border: "1px solid var(--border-subtle)",
-                boxShadow: "0 8px 40px rgba(106,142,143,0.08)",
+                borderRadius: "var(--card-radius)",
+                boxShadow: "var(--card-shadow)",
               }}
               whileHover={{
                 y: -6,
-                boxShadow: "0 16px 56px rgba(106,142,143,0.18)",
+                boxShadow: "var(--card-shadow-hover)",
                 transition: { duration: 0.3 },
               }}
             >
               {/* Decorative corner accent */}
               <div
-                className="absolute top-0 left-0 w-20 h-20 rounded-tl-2xl pointer-events-none"
+                className="absolute top-0 left-0 w-20 h-20 pointer-events-none"
                 style={{
+                  borderTopLeftRadius: "var(--card-radius)",
                   borderTop: "2px solid var(--calm-accent)",
                   borderLeft: "2px solid var(--calm-accent)",
                   opacity: 0.25,
@@ -162,8 +164,9 @@ function VisionMissionCards() {
 
               {/* Decorative bottom-right accent line */}
               <div
-                className="absolute bottom-0 right-0 w-20 h-20 rounded-br-2xl pointer-events-none"
+                className="absolute bottom-0 right-0 w-20 h-20 pointer-events-none"
                 style={{
+                  borderBottomRightRadius: "var(--card-radius)",
                   borderBottom: "2px solid var(--calm-accent)",
                   borderRight: "2px solid var(--calm-accent)",
                   opacity: 0.12,
@@ -190,22 +193,24 @@ function VisionMissionCards() {
             transition={{ ...springConfig, delay: 0.2 }}
           >
             <motion.div
-              className="relative rounded-2xl p-8 md:p-10 h-full"
+              className="relative p-8 md:p-10 h-full"
               style={{
                 background: "var(--surface)",
                 border: "1px solid var(--border-subtle)",
-                boxShadow: "0 8px 40px rgba(122,158,159,0.08)",
+                borderRadius: "var(--card-radius)",
+                boxShadow: "var(--card-shadow)",
               }}
               whileHover={{
                 y: -6,
-                boxShadow: "0 16px 56px rgba(122,158,159,0.18)",
+                boxShadow: "var(--card-shadow-hover)",
                 transition: { duration: 0.3 },
               }}
             >
               {/* Decorative corner accent */}
               <div
-                className="absolute top-0 right-0 w-20 h-20 rounded-tr-2xl pointer-events-none"
+                className="absolute top-0 right-0 w-20 h-20 pointer-events-none"
                 style={{
+                  borderTopRightRadius: "var(--card-radius)",
                   borderTop: "2px solid var(--accent)",
                   borderRight: "2px solid var(--accent)",
                   opacity: 0.25,
@@ -266,8 +271,9 @@ function VisionMissionCards() {
 
               {/* Decorative bottom-left accent line */}
               <div
-                className="absolute bottom-0 left-0 w-20 h-20 rounded-bl-2xl pointer-events-none"
+                className="absolute bottom-0 left-0 w-20 h-20 pointer-events-none"
                 style={{
+                  borderBottomLeftRadius: "var(--card-radius)",
                   borderBottom: "2px solid var(--accent)",
                   borderLeft: "2px solid var(--accent)",
                   opacity: 0.12,
@@ -288,8 +294,8 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "var(--background)" }}
+      className="relative overflow-hidden"
+      style={{ paddingTop: "var(--section-py)", paddingBottom: "var(--section-py)", background: "var(--background)" }}
     >
       {/* Subtle dot grid background */}
       <div
@@ -302,7 +308,7 @@ export default function AboutSection() {
       />
 
       {/* ── Section Header ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <div className="section-container relative z-10">
         <FadeInBlock className="text-center mb-20 md:mb-28">
           <h2
             className="text-5xl md:text-6xl lg:text-7xl font-bold mb-5"
@@ -324,7 +330,7 @@ export default function AboutSection() {
       </div>
 
       {/* ── Our Story Block — Editorial Clean ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-20 md:mb-28">
+      <div className="section-container mb-20 md:mb-28">
 
         {/* Label row with extending line */}
         <FadeInBlock>
@@ -437,7 +443,7 @@ export default function AboutSection() {
       <VisionMissionCards />
 
       {/* ── Core Values ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 mt-28 md:mt-36">
+      <div className="section-container relative z-10 mt-28 md:mt-36">
         <FadeInBlock className="text-center mb-14">
           <h3
             className="text-3xl md:text-4xl font-bold mb-4"
@@ -502,16 +508,18 @@ export default function AboutSection() {
           ].map((value, index) => (
             <FadeInBlock key={index} delay={index * 0.1}>
               <div
-                className="group relative rounded-2xl p-7 text-center transition-all duration-300 cursor-default hover:-translate-y-1"
+                className="group relative p-7 text-center transition-all duration-300 cursor-default hover:-translate-y-1"
                 style={{
                   background: "var(--surface)",
                   border: "1px solid var(--border-subtle)",
+                  borderRadius: "var(--card-radius)",
+                  boxShadow: "var(--card-shadow)",
                 }}
               >
                 {/* Hover border */}
                 <div
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ border: `1px solid ${value.accent}` }}
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ border: `1px solid ${value.accent}`, borderRadius: "var(--card-radius)" }}
                 />
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-5 transition-transform duration-300 group-hover:scale-110"

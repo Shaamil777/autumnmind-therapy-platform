@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-32 w-full relative overflow-hidden" style={{ background: "var(--background)" }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="contact" className="w-full relative overflow-hidden" style={{ background: "var(--background)", paddingTop: "var(--section-py)", paddingBottom: "var(--section-py)" }}>
+      <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left Column: Content */}
@@ -32,7 +32,7 @@ export default function ContactSection() {
             </h2>
 
             {/* Trust Line */}
-            <div className="flex items-center gap-3 mb-10 w-fit px-5 py-3 rounded-full border shadow-sm" style={{ borderColor: 'var(--border-subtle)', backgroundColor: 'var(--surface)' }}>
+            <div className="flex items-center gap-3 mb-10 w-fit px-5 py-3 border shadow-sm" style={{ borderColor: 'var(--border-subtle)', backgroundColor: 'var(--surface)', borderRadius: 'var(--card-radius)' }}>
               <span className="text-[var(--accent)]">
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
               </span>
@@ -106,7 +106,7 @@ export default function ContactSection() {
             </div>
 
             {/* Mobile Emergency Note - visually hidden on lg to move it to right column bottom if needed, or keep here. Let's keep it here for all. */}
-            <div className="mt-8 lg:mt-10 bg-[#FFF4F4] border border-[#FFD6D6] rounded-2xl p-5 md:p-6 flex items-start gap-4 shadow-sm">
+            <div className="mt-8 lg:mt-10 bg-[#FFF4F4] border border-[#FFD6D6] p-5 md:p-6 flex items-start gap-4 shadow-sm" style={{ borderRadius: 'var(--card-radius)' }}>
               <div className="shrink-0 text-[#D32F2F]">
                  <svg className="w-6 h-6 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
               </div>
@@ -128,7 +128,7 @@ export default function ContactSection() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto"
           >
-            <div className="bg-white rounded-[2rem] p-8 md:p-10 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] border border-[var(--border-subtle)] relative overflow-hidden">
+            <div className="bg-white p-8 md:p-10 border border-[var(--border-subtle)] relative overflow-hidden" style={{ borderRadius: 'var(--card-radius)', boxShadow: 'var(--card-shadow)' }}>
                {/* Decorative Gradient Blob */}
                <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[var(--accent)] opacity-5 blur-3xl pointer-events-none" />
                <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-[var(--calm-accent)] opacity-5 blur-3xl pointer-events-none" />
