@@ -146,161 +146,60 @@ export default function AboutSection() {
         </div>
       </div>
 
-      {/* 3. Meet Dr. Rahma & Mission */}
+      {/* 3. How Therapy Works */}
       <div className="section-container py-24 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-24 md:mb-32">
-          
-          {/* Dr. Rahma Card */}
-          <FadeInBlock delay={0.1} className="flex flex-col">
-            <div
-              className="w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-10 relative group shadow-lg"
-              style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border-subtle)",
-              }}
-            >
-              <Image
-                src="/images/leaf.png"
-                alt="Leaf"
-                fill
-                className="object-contain opacity-[0.05] scale-150 group-hover:scale-125 group-hover:-rotate-6 transition-all duration-1000 ease-out"
-              />
-              <div className="absolute inset-0 flex items-center justify-center text-[var(--primary)]/40 font-semibold tracking-wider uppercase text-sm z-10 backdrop-blur-[1px]">
-                [Photo Placeholder]
-              </div>
-            </div>
-            
-            <div
-              className="text-xs font-bold uppercase tracking-widest mb-4"
-              style={{ color: "var(--accent)" }}
-            >
-              Lead Psychiatrist
-            </div>
-            <h3
-              className="text-4xl md:text-5xl font-bold mb-6"
-              style={{
-                color: "var(--primary)",
-                fontFamily: "var(--font-cormorant-garamond)",
-              }}
-            >
-              Meet Dr. Rahma
-            </h3>
-            <p
-              className="text-[16px] md:text-[18px] leading-relaxed"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              [Dummy Content] Dr. Rahma is a board-certified professional with a profound dedication to mental wellness. With years of clinical experience, she brings a warm, empathetic, and evidence-based approach to help individuals navigate life's complexities.
-            </p>
-          </FadeInBlock>
-
-          {/* Mission & Extra info */}
-          <div className="flex flex-col justify-center space-y-16">
-            <FadeInBlock delay={0.2}>
-              <h3
-                className="text-4xl font-bold mb-6"
-                style={{
-                  color: "var(--primary)",
-                  fontFamily: "var(--font-cormorant-garamond)",
-                }}
-              >
-                Our Mission
-              </h3>
-              <p
-                className="text-[16px] md:text-[18px] leading-relaxed"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                [Dummy Content] To empower individuals on their wellness journey by providing accessible, personalized, and deeply compassionate care that transforms lives.
-              </p>
-            </FadeInBlock>
-
-            <FadeInBlock
-              delay={0.3}
-              className="p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group shadow-lg transition-transform duration-500 hover:-translate-y-2"
-              style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border-subtle)",
-              }}
-            >
-              <div className="absolute top-0 right-0 w-48 h-48 opacity-[0.03] pointer-events-none -mr-10 -mt-10 group-hover:rotate-12 transition-transform duration-1000">
-                <Image
-                  src="/images/leaf.png"
-                  alt="Leaf"
-                  fill
-                  className="object-contain rotate-45"
-                />
-              </div>
-              <div
-                className="text-6xl mb-4 font-serif leading-none"
-                style={{ color: "var(--accent)" }}
-              >
-                “
-              </div>
-              <p
-                className="text-2xl md:text-3xl italic leading-relaxed relative z-10"
-                style={{
-                  color: "var(--primary)",
-                  fontFamily: "var(--font-cormorant-garamond)",
-                }}
-              >
-                [Dummy Content] "We believe everyone deserves access to compassionate, expert psychiatric care — no matter where they are."
-              </p>
-            </FadeInBlock>
-          </div>
-        </div>
-
-        {/* 4. Our Approach */}
-        <FadeInBlock
-          delay={0.2}
-          className="relative rounded-[3rem] overflow-hidden shadow-2xl p-10 md:p-16 lg:p-24"
-          style={{ background: "var(--primary)", color: "white" }}
-        >
-          <Image
-            src="/images/leaf.png"
-            alt="Leaf Pattern"
-            fill
-            className="object-cover opacity-10 mix-blend-overlay scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)] to-transparent mix-blend-multiply opacity-50" />
-
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <h3
-                className="text-4xl md:text-6xl font-bold mb-6"
-                style={{ fontFamily: "var(--font-cormorant-garamond)" }}
-              >
-                Our Approach
-              </h3>
-              <p className="text-lg md:text-xl leading-relaxed opacity-90 mb-10">
-                [Dummy Content] We integrate cutting-edge, evidence-based practices with a genuinely holistic view of health. By treating the whole person rather than just the symptoms, we co-create sustainable strategies for lifelong well-being.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 transition-all hover:bg-white/10 hover:-translate-y-1">
-                <h4
-                  className="font-bold text-2xl mb-3"
-                  style={{ fontFamily: "var(--font-cormorant-garamond)" }}
-                >
-                  Holistic View
-                </h4>
-                <p className="text-[16px] opacity-80 leading-relaxed">
-                  Mind, body, and spirit connection tailored to your life.
-                </p>
-              </div>
-              <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 transition-all hover:bg-white/10 hover:-translate-y-1">
-                <h4
-                  className="font-bold text-2xl mb-3"
-                  style={{ fontFamily: "var(--font-cormorant-garamond)" }}
-                >
-                  Evidence-Based
-                </h4>
-                <p className="text-[16px] opacity-80 leading-relaxed">
-                  Rooted in modern science and proven methodologies.
-                </p>
-              </div>
-            </div>
-          </div>
+        <FadeInBlock className="text-center mb-16 md:mb-24">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style={{ color: "var(--primary)", fontFamily: "var(--font-cormorant-garamond)" }}>
+            How Therapy Works
+          </h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto" style={{ color: "var(--text-secondary)" }}>
+            A collaborative journey designed to help you discover clarity, build resilience, and achieve lasting well-being.
+          </p>
         </FadeInBlock>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-10 relative">
+          {/* Connecting line for desktop (visible only on large screens when 4 columns fit in one row) */}
+          <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-[1px] z-0" style={{ background: "linear-gradient(90deg, transparent, var(--border-subtle) 20%, var(--border-subtle) 80%, transparent)" }} />
+          
+          {[
+            {
+              step: "01",
+              title: "Book a Session",
+              description: "Choose a convenient time and select the specialist that best matches your needs.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            },
+            {
+              step: "02",
+              title: "Initial Consultation",
+              description: "Discuss your concerns, personal goals, and needs in a supportive, non-judgmental space.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+            },
+            {
+              step: "03",
+              title: "Personalized Support",
+              description: "A customized therapy plan is carefully developed based on your unique situation.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+            },
+            {
+              step: "04",
+              title: "Ongoing Sessions",
+              description: "Work collaboratively toward personal growth, lasting healing, and emotional well-being.",
+              icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            }
+          ].map((item, i) => (
+            <FadeInBlock key={i} delay={0.1 * i} className="relative z-10 flex flex-col items-center text-center group">
+              <div className="w-24 h-24 rounded-full border border-[var(--border-subtle)] flex items-center justify-center mb-8 shadow-sm group-hover:-translate-y-2 group-hover:shadow-lg transition-all duration-500 relative" style={{ background: "rgba(106,142,143,0.02)", color: "var(--accent)" }}>
+                <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500" style={{ background: "var(--accent)" }} />
+                {item.icon}
+                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shadow-md" style={{ background: "var(--primary)", color: "white" }}>
+                  {item.step}
+                </div>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4" style={{ color: "var(--primary)", fontFamily: "var(--font-cormorant-garamond)" }}>{item.title}</h3>
+              <p className="text-[15px] md:text-[16px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>{item.description}</p>
+            </FadeInBlock>
+          ))}
+        </div>
       </div>
     </section>
   );
