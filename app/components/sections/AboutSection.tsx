@@ -46,7 +46,7 @@ function ScrollRevealRida() {
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <div ref={ref} className="w-full flex justify-center pt-20 pb-4">
+    <div ref={ref} className="relative w-full flex justify-center pt-20 pb-4">
       <motion.h2
         style={{
           clipPath,

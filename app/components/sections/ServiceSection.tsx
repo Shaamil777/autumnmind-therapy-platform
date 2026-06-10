@@ -156,7 +156,7 @@ export default function ServiceSection() {
                     ? "0 16px 48px rgba(31,31,31,0.18), 0 0 0 1px rgba(122,158,159,0.15), inset 0 1px 0 rgba(255,255,255,0.05)"
                     : "none",
                   minHeight: isHovered ? "240px" : "auto",
-                  transition: "border-radius 0.7s cubic-bezier(0.16, 1, 0.3, 1), border-bottom 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.7s cubic-bezier(0.16, 1, 0.3, 1), min-height 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
+                  transition: "border-radius 1.2s cubic-bezier(0.16, 1, 0.3, 1), border-bottom 1.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 1.2s cubic-bezier(0.16, 1, 0.3, 1), min-height 1.2s cubic-bezier(0.16, 1, 0.3, 1)",
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -169,7 +169,7 @@ export default function ServiceSection() {
                     borderRadius: "inherit",
                     transformOrigin: "left center",
                     transform: isHovered ? "scaleX(1)" : "scaleX(0)",
-                    transition: "transform 0.75s cubic-bezier(0.16, 1, 0.3, 1)",
+                    transition: "transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)",
                   }}
                 />
 
@@ -179,7 +179,7 @@ export default function ServiceSection() {
                   style={{
                     background: "linear-gradient(135deg, rgba(122,158,159,0.1) 0%, transparent 50%, rgba(106,142,143,0.05) 100%)",
                     opacity: isHovered ? 1 : 0,
-                    transition: "opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s",
+                    transition: "opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s",
                   }}
                 />
 
@@ -188,7 +188,7 @@ export default function ServiceSection() {
                   style={{
                     paddingTop: isHovered ? "2rem" : "1.5rem",
                     paddingBottom: isHovered ? "2rem" : "1.5rem",
-                    transition: "padding 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
+                    transition: "padding 1.2s cubic-bezier(0.16, 1, 0.3, 1)",
                   }}
                 >
                   {/* Top row: Number + Title */}
@@ -200,7 +200,7 @@ export default function ServiceSection() {
                         color: isHovered
                           ? "var(--accent)"
                           : "rgba(31,31,31,0.18)",
-                        transition: "color 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                        transition: "color 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
                       }}
                     >
                       {number}
@@ -213,7 +213,7 @@ export default function ServiceSection() {
                         fontFamily: "var(--font-cormorant-garamond)",
                         color: isHovered ? "#FFFFFF" : "var(--primary)",
                         transform: isHovered ? "translateX(4px)" : "translateX(0)",
-                        transition: "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+                        transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)",
                       }}
                     >
                       {service.title}
@@ -229,7 +229,7 @@ export default function ServiceSection() {
                       opacity: isHovered ? 0 : 0.8,
                       maxHeight: isHovered ? 0 : "3rem",
                       overflow: "hidden",
-                      transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+                      transition: "all 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
                     }}
                   >
                     {service.shortDescription}
@@ -242,7 +242,7 @@ export default function ServiceSection() {
                         initial={{ height: 0, opacity: 0, marginTop: 0 }}
                         animate={{ height: "auto", opacity: 1, marginTop: 14 }}
                         exit={{ height: 0, opacity: 0, marginTop: 0 }}
-                        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden max-w-lg ml-0 md:ml-[calc(0.875rem+1.5rem)]"
                       >
                         <p
@@ -292,14 +292,14 @@ export default function ServiceSection() {
                     boxShadow: "0 20px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08)",
                     borderRadius: "0.875rem",
                     zIndex: 20,
-                    transition: "all 0.6s cubic-bezier(0.19, 1, 0.22, 1)",
+                    transition: "all 1.0s cubic-bezier(0.19, 1, 0.22, 1)",
                   }}
                 >
                   <div
                     className="absolute inset-0"
                     style={{
                       transform: isHovered ? "scale(1)" : "scale(1.15)",
-                      transition: "transform 0.7s cubic-bezier(0.19, 1, 0.22, 1)",
+                      transition: "transform 1.2s cubic-bezier(0.19, 1, 0.22, 1)",
                     }}
                   >
                     <Image
