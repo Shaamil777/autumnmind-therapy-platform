@@ -80,10 +80,16 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-quicksand), 'Quicksand', sans-serif;
+  overflow-x: hidden;
 }
 
 .font-quicksand {
@@ -142,4 +148,43 @@ body {
   .animate-bounce {
     animation: none;
   }
+}
+
+/* ══════════════════════════════════════════
+   7. LOADING & INTRO ANIMATIONS
+   ══════════════════════════════════════════ */
+
+html.is-loading,
+body.is-loading {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+body.is-loading nav,
+body.is-loading footer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.loading-complete nav,
+body.loading-complete footer {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ══════════════════════════════════════════
+   8. HERO BACKGROUND GRADIENTS
+   ══════════════════════════════════════════ */
+
+.hero-mesh-1 {
+  background: radial-gradient(circle, rgba(229,169,60,0.18) 0%, rgba(217,116,91,0.08) 50%, rgba(250,249,246,0) 70%);
+}
+
+.hero-mesh-2 {
+  background: radial-gradient(circle, rgba(106,142,143,0.15) 0%, rgba(122,158,159,0.08) 50%, rgba(250,249,246,0) 70%);
+}
+
+.hero-mesh-3 {
+  background: radial-gradient(circle, rgba(229,169,60,0.1) 0%, rgba(250,249,246,0) 60%);
 }
