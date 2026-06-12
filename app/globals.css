@@ -70,6 +70,8 @@
   --color-calm-accent-hover: var(--calm-accent-hover);
   --font-sans: var(--font-quicksand);
   --font-quicksand: var(--font-quicksand);
+  --font-serif: var(--font-cormorant-garamond);
+  --font-cormorant: var(--font-cormorant-garamond);
 }
 
 /* ══════════════════════════════════════════
@@ -94,6 +96,10 @@ body {
 
 .font-quicksand {
   font-family: var(--font-quicksand), 'Quicksand', sans-serif;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant-garamond), 'Cormorant Garamond', serif;
 }
 
 /* ══════════════════════════════════════════
