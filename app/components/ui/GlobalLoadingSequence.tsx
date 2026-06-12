@@ -61,7 +61,7 @@ export default function GlobalLoadingSequence() {
         <img
           src="/images/leaf.png"
           alt="Autumn Leaf"
-          className={`w-[24rem] h-[24rem] sm:w-[32rem] sm:h-[32rem] md:w-[42rem] md:h-[42rem] lg:w-[46rem] lg:h-[46rem] object-contain select-none filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.06)] ${
+          className={`w-[20rem] h-[20rem] sm:w-[26rem] sm:h-[26rem] md:w-[32rem] md:h-[32rem] lg:w-[36rem] lg:h-[36rem] object-contain select-none filter drop-shadow-[0_20px_50px_rgba(0,0,0,0.06)] ${
             loadingState === 'fade-in' ? 'animate-pulse' : ''
           }`}
         />
