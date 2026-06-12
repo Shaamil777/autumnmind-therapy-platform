@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import FloatingToast from "./components/ui/FloatingToast";
+import SmoothScrolling from "./components/ui/SmoothScrolling";
 import { Quicksand, Cormorant_Garamond } from 'next/font/google';
 import type { Metadata } from "next";
 
@@ -30,10 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${quicksand.variable} ${cormorantGaramond.variable} font-quicksand`}>
-        <Navbar />
-        {children}
-        <Footer />
-        <FloatingToast />
+        <SmoothScrolling>
+          <Navbar />
+          {children}
+          <Footer />
+          <FloatingToast />
+        </SmoothScrolling>
       </body>
     </html>
   );

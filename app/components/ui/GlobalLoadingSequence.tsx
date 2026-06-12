@@ -47,8 +47,8 @@ export default function GlobalLoadingSequence() {
 
       {/* The Global Shared Leaf */}
       <div 
-        className={`z-[60] flex items-center justify-center overflow-hidden pointer-events-none transition-all ease-[cubic-bezier(0.25,1,0.5,1)] ${
-          loadingState === 'complete' ? 'absolute top-0 left-0 w-full h-[100vh]' : 'fixed inset-0'
+        className={`flex items-center justify-center overflow-hidden pointer-events-none transition-all ease-[cubic-bezier(0.25,1,0.5,1)] ${
+          loadingState === 'complete' ? 'absolute top-0 left-0 w-full h-[100vh] z-[30]' : 'fixed inset-0 z-[60]'
         }`}
         style={{
           transitionDuration: loadingState === 'fade-in' ? '800ms' : loadingState === 'transition' ? '1200ms' : '0ms',
