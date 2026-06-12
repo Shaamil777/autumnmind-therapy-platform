@@ -10,6 +10,20 @@ export default function HeroSection() {
         <div className="hero-mesh-3 absolute top-[20%] left-[20%] w-[50%] h-[50%] rounded-full blur-[140px]" />
       </div>
 
+      {/* Soft Watercolor Wash Behind the Leaf */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none opacity-90 mix-blend-multiply">
+        <div className="relative w-[24rem] h-[24rem] sm:w-[32rem] sm:h-[32rem] md:w-[45rem] md:h-[45rem]">
+          {/* Base Beige Wash */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[80%] bg-[#EFE6DD] rounded-[40%_60%_70%_30%/40%_50%_60%_50%] blur-[50px] opacity-80"></div>
+          {/* Pale Orange Spread */}
+          <div className="absolute top-[40%] left-[55%] -translate-x-1/2 -translate-y-1/2 w-[70%] h-[85%] bg-[#F4D5C2] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-[60px] opacity-70"></div>
+          {/* Warm Cream Core */}
+          <div className="absolute top-[55%] left-[45%] -translate-x-1/2 -translate-y-1/2 w-[80%] h-[70%] bg-[#FDFBF7] rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-[40px] opacity-90"></div>
+          {/* Subtle Rust/Peach Accent */}
+          <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#E8C3B0] rounded-[50%_50%_20%_80%/25%_80%_20%_75%] blur-[70px] opacity-60"></div>
+        </div>
+      </div>
+
       {/* Main Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center mt-[-55vh] max-w-5xl mx-auto px-4">
         {/* Top Tagline with Icon */}
@@ -73,7 +87,7 @@ export default function HeroSection() {
           className="relative block w-full h-[80px] md:h-[130px] lg:h-[160px] translate-y-px"
         >
           <path
-            d="M 0,150 Q 720,10 1440,150 Z"
+            d="M 0,0 Q 720,250 1440,0 L 1440,150 L 0,150 Z"
             fill="var(--accent-light-color)"
             opacity="0.95"
           />
