@@ -70,12 +70,15 @@ export default function HeroSection() {
         </p>
 
         {/* Button */}
-        <button className="hero-animate-up hero-delay-6 bg-[#5A6B56] text-white px-6 py-3 rounded-md uppercase tracking-[0.1em] text-xs sm:text-sm font-medium hover:bg-[#4A5947] transition-all flex items-center gap-2">
-          BOOK APPOINTMENT
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
-            <path d="M5 12h14"></path>
-            <path d="m12 5 7 7-7 7"></path>
-          </svg>
+        <button className="hero-animate-up hero-delay-6 group relative bg-[#5A6B56] text-white px-8 py-3.5 sm:px-10 sm:py-4 rounded-full uppercase tracking-[0.15em] text-xs sm:text-sm font-semibold shadow-lg hover:shadow-2xl hover:shadow-[#5A6B56]/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 w-full h-full bg-[#4A5947] scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-300 ease-out z-0"></div>
+          <span className="relative z-10 flex items-center gap-3">
+            BOOK APPOINTMENT
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </span>
         </button>
       </div>
 

@@ -48,31 +48,32 @@ export default function TrustSection() {
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {trustItems.map((item, index) => (
-              <RevealOnScroll key={index}>
+              <RevealOnScroll key={index} slideUp delay={index * 150} duration={800}>
                 <div 
-                  className="group h-full relative p-6 md:p-8 flex flex-col transition-colors duration-500 hover:bg-black/40 border border-white/50 rounded-[1.5rem] text-white"
-                  style={{
-                    background: "rgba(255, 255, 255, 0.08)",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
-                  }}
+                  className="group h-full relative p-8 flex flex-col transition-all duration-500 bg-white/5 border border-white/20 rounded-[1.5rem] overflow-hidden hover:bg-white/10 hover:border-white/40 hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] hover:-translate-y-2"
                 >
-                  <div className="flex justify-between items-start mb-6">
-                    <h4 className="text-lg md:text-xl font-bold text-white pr-4">
+                  <div className="flex justify-between items-start mb-6 relative z-10">
+                    <h4 
+                      className="text-xl md:text-2xl font-semibold text-white pr-4 leading-tight transition-colors"
+                      style={{ fontFamily: "var(--font-cormorant-garamond)" }}
+                    >
                       {item.title}
                     </h4>
-                    <div className="text-white shrink-0">
-                      <div className="w-8 h-8 flex items-center justify-center">
-                        <Icon name={item.iconName} className="w-6 h-6" />
+                    <div className="text-[#D3C4B7] shrink-0 bg-white/10 p-2 rounded-full transition-colors group-hover:bg-[#D3C4B7] group-hover:text-[#3A4B35]">
+                      <div className="w-6 h-6 flex items-center justify-center">
+                        <Icon name={item.iconName} className="w-5 h-5" />
                       </div>
                     </div>
                   </div>
                   
-                  <div className="flex-grow">
-                    <p className="text-white text-[14px] md:text-[15px] leading-relaxed font-medium">
+                  <div className="flex-grow relative z-10">
+                    <p className="text-white/80 text-[15px] leading-relaxed font-medium transition-colors">
                       {item.description}
                     </p>
                   </div>
+
+                  {/* Elegant decorative glow on hover */}
+                  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0 pointer-events-none"></div>
                 </div>
               </RevealOnScroll>
             ))}

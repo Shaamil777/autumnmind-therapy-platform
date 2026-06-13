@@ -211,25 +211,22 @@ export default function ServiceSection() {
           </div>
 
           {/* ── RIGHT SIDE: Service List ── */}
-          <div className="lg:w-[62%] w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-                delay: 0.15,
-              }}
-              className="flex flex-col"
-            >
-              {services.map((service, index) => {
+          <div className="lg:w-[62%] w-full flex flex-col">
+            {services.map((service, index) => {
                 const isHovered = hoveredIndex === index;
                 const number = String(index + 1).padStart(2, "0");
 
                 return (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{
+                      duration: 0.8,
+                      ease: [0.16, 1, 0.3, 1],
+                      delay: index * 0.15,
+                    }}
                     className="relative cursor-pointer group"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={handleMouseLeave}
@@ -379,10 +376,9 @@ export default function ServiceSection() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
+                  </motion.div>
                 );
               })}
-            </motion.div>
           </div>
         </div>
       </div>

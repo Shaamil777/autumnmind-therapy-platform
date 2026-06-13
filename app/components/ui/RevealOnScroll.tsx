@@ -11,6 +11,10 @@ interface RevealOnScrollProps {
   threshold?: number;
   /** IntersectionObserver root margin. Default: "-50px" */
   rootMargin?: string;
+  /** Transition delay in ms. Default: 0 */
+  delay?: number;
+  /** Transition duration in ms. Default: 700 */
+  duration?: number;
 }
 
 /**
@@ -18,7 +22,7 @@ interface RevealOnScrollProps {
  * (no framer-motion dependency). For heavier animations, use FadeIn instead.
  *
  * @example
- * <RevealOnScroll slideUp>
+ * <RevealOnScroll slideUp delay={200} duration={1000}>
  *   <div>Revealed content</div>
  * </RevealOnScroll>
  */
@@ -28,6 +32,8 @@ export default function RevealOnScroll({
   slideUp = false,
   threshold = 0.1,
   rootMargin = "-50px",
+  delay = 0,
+  duration = 700,
 }: RevealOnScrollProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -48,16 +54,25 @@ export default function RevealOnScroll({
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  const baseClasses = `duration-700 ease-out h-full ${slideUp ? "transform-gpu" : ""}`;
+  const baseClasses = `ease-out h-full ${slideUp ? "transform-gpu" : ""}`;
   const transitionClass = slideUp ? "transition-[opacity,transform]" : "transition-opacity";
   const hiddenClasses = slideUp ? "opacity-0 translate-y-8" : "opacity-0";
   const visibleClasses = slideUp ? "opacity-100 translate-y-0" : "opacity-100";
+
+  const dynamicStyles: React.CSSProperties = {
+    transitionDuration: `${duration}ms`,
+    transitionDelay: `${delay}ms`,
+  };
+
+  if (slideUp) {
+    dynamicStyles.willChange = "opacity, transform";
+  }
 
   return (
     <div
       ref={ref}
       className={`${baseClasses} ${transitionClass} ${isVisible ? visibleClasses : hiddenClasses} ${className}`}
-      style={slideUp ? { willChange: "opacity, transform" } : {}}
+      style={dynamicStyles}
     >
       {children}
     </div>
